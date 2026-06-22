@@ -31,18 +31,97 @@
         li { margin: 8px 0; }
         ol { padding-left: 20px; }
         ol li { margin: 8px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th { background: #2E7D32; color: white; padding: 10px; text-align: left; }
+        td { padding: 10px; border-bottom: 1px solid #ddd; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        a { color: #2E7D32; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .badge-collected { background: #E3F2FD; color: #1565C0; }
+        .badge-shared { background: #FFF3E0; color: #E65100; }
+        .badge-optional { background: #E8F5E9; color: #2E7D32; }
+        .badge-required { background: #FFEBEE; color: #C62828; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Privacy Policy for AgriAgent</h1>
-        <div class="last-updated">Last Updated: June 1, 2026</div>
+        <div class="last-updated">Last Updated: June 22, 2026</div>
 
         <p>AgriAgent ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application AgriAgent (the "App").</p>
 
+        <!-- DATA SAFETY SUMMARY -->
+        <h2>Data Safety Summary</h2>
+        <table>
+            <tr>
+                <th>Data Type</th>
+                <th>Purpose</th>
+                <th>Collected</th>
+                <th>Shared</th>
+                <th>Required</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>Account management, Personalization, App functionality</td>
+                <td><span class="badge badge-collected">Yes</span></td>
+                <td><span class="badge badge-shared">Firebase</span></td>
+                <td><span class="badge badge-required">Required</span></td>
+            </tr>
+            <tr>
+                <td>Email Address</td>
+                <td>Account management, App functionality, Developer communications</td>
+                <td><span class="badge badge-collected">Yes</span></td>
+                <td><span class="badge badge-shared">Firebase</span></td>
+                <td><span class="badge badge-required">Required</span></td>
+            </tr>
+            <tr>
+                <td>User IDs</td>
+                <td>Account management, App functionality</td>
+                <td><span class="badge badge-collected">Yes</span></td>
+                <td><span class="badge badge-shared">Firebase</span></td>
+                <td><span class="badge badge-required">Required</span></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>App functionality, Account management</td>
+                <td><span class="badge badge-collected">Yes</span></td>
+                <td><span class="badge badge-collected">No</span></td>
+                <td><span class="badge badge-optional">Optional</span></td>
+            </tr>
+            <tr>
+                <td>Photos</td>
+                <td>App functionality, Personalization, Account management</td>
+                <td><span class="badge badge-collected">Yes</span></td>
+                <td><span class="badge badge-collected">No</span></td>
+                <td><span class="badge badge-optional">Optional</span></td>
+            </tr>
+            <tr>
+                <td>Videos</td>
+                <td>App functionality</td>
+                <td><span class="badge badge-collected">Yes</span></td>
+                <td><span class="badge badge-collected">No</span></td>
+                <td><span class="badge badge-optional">Optional</span></td>
+            </tr>
+            <tr>
+                <td>Approximate Location</td>
+                <td>App functionality, Personalization</td>
+                <td><span class="badge badge-collected">Yes</span></td>
+                <td><span class="badge badge-collected">No</span></td>
+                <td><span class="badge badge-required">Required</span></td>
+            </tr>
+            <tr>
+                <td>Device ID</td>
+                <td>App functionality, Account management</td>
+                <td><span class="badge badge-collected">Yes</span></td>
+                <td><span class="badge badge-shared">Firebase</span></td>
+                <td><span class="badge badge-required">Required</span></td>
+            </tr>
+        </table>
+
         <!-- DELETE ACCOUNT SECTION -->
-        <div class="delete-box">
-            <h2>Delete Your Account</h2>
+        <div class="delete-box" id="data-deletion">
+            <h2>Delete Your Account & Data</h2>
             <p>You can delete your AgriAgent account and all associated data at any time.</p>
             
             <h3>Method 1: Delete from the App</h3>
@@ -61,169 +140,267 @@
                 <li>Your registered email address</li>
                 <li>Your full name (as it appears in the app)</li>
             </ul>
-            <p>We will process your request within <strong>7 business days</strong>.</p>
+            <p>We will process your request within <strong>7 business days</strong> and send you a confirmation email once completed.</p>
 
             <h3>What Gets Deleted</h3>
             <ul>
-                <li>Your profile information (name, photo, phone number)</li>
-                <li>Your role-specific data (labourer skills, contractor details, etc.)</li>
-                <li>Your equipment and produce listings</li>
-                <li>Your community forum posts and solutions</li>
-                <li>Your advertisement campaigns</li>
-                <li>Your payment and transaction history</li>
+                <li>Your profile information (name, photo, phone number, address)</li>
+                <li>Your role-specific data (labourer skills, contractor details, farmer land records, etc.)</li>
+                <li>Your equipment and produce marketplace listings</li>
+                <li>Your community forum posts and farming solutions</li>
+                <li>Your advertisement campaigns and promotions</li>
+                <li>Your transaction and payment history</li>
                 <li>Your ratings and reviews</li>
+                <li>Your chat messages and communication history</li>
+                <li>Your location history and preferences</li>
             </ul>
 
-            <p><strong>Note:</strong> Some transaction records may be retained for up to 90 days to comply with legal and tax obligations. After this period, all data is permanently removed.</p>
+            <h3>Data Retention After Deletion</h3>
+            <ul>
+                <li>Some transaction records may be retained for up to <strong>90 days</strong> to comply with legal and tax obligations</li>
+                <li>After this period, all data is permanently and irreversibly removed</li>
+                <li>Anonymized, non-identifiable analytics data may be retained for service improvement</li>
+            </ul>
         </div>
 
         <h2>1. Information We Collect</h2>
         
-        <h3>Personal Information</h3>
+        <h3>1.1 Personal Information</h3>
         <ul>
-            <li>Name</li>
-            <li>Email address</li>
-            <li>Phone number</li>
-            <li>Profile picture (if you choose to upload)</li>
-            <li>Address and location data</li>
+            <li><strong>Name:</strong> Display name for your profile, collected via Google Sign-In</li>
+            <li><strong>Email Address:</strong> Primary contact and account identifier, collected via Google Sign-In</li>
+            <li><strong>Phone Number:</strong> Optional contact number for communication between users</li>
+            <li><strong>Profile Picture:</strong> Optional photo for your account (if you choose to upload)</li>
+            <li><strong>Address:</strong> Your village, district, or city for location-based matching</li>
         </ul>
 
-        <h3>User Role Specific Information</h3>
+        <h3>1.2 User Role Specific Information</h3>
         <ul>
-            <li><strong>Farmers:</strong> Land details, crop information, labour requirements</li>
-            <li><strong>Labourers:</strong> Skills, experience, availability, wage expectations</li>
-            <li><strong>Contractors:</strong> Team size, equipment owned, service areas</li>
-            <li><strong>Buyers:</strong> Purchase history, delivery address, order preferences</li>
+            <li><strong>Farmers:</strong> Land details, crop types, labour requirements, equipment needs</li>
+            <li><strong>Labourers:</strong> Skills, experience level, availability schedule, wage expectations</li>
+            <li><strong>Contractors:</strong> Team size, equipment owned, service areas, pricing</li>
+            <li><strong>Buyers:</strong> Purchase history, delivery address, order preferences, payment methods</li>
         </ul>
 
-        <h3>Device Information</h3>
+        <h3>1.3 Device & Technical Information</h3>
         <ul>
-            <li>Device model and operating system version</li>
-            <li>Unique device identifiers</li>
-            <li>App version and usage data</li>
+            <li>Device model and manufacturer</li>
+            <li>Operating system version (Android)</li>
+            <li>Unique device identifiers (Firebase Installation ID)</li>
+            <li>App version number</li>
+            <li>Mobile network information</li>
         </ul>
 
-        <h3>Usage Data</h3>
+        <h3>1.4 Usage Data</h3>
         <ul>
-            <li>Features you use</li>
-            <li>Time spent in the app</li>
-            <li>Listings viewed or created</li>
-            <li>Transaction history</li>
-            <li>Ratings and reviews you submit</li>
+            <li>Features you interact with</li>
+            <li>Time spent in different sections</li>
+            <li>Listings you create, view, or respond to</li>
+            <li>Transaction and booking history</li>
+            <li>Ratings and reviews you give and receive</li>
+            <li>Search queries within the app</li>
         </ul>
 
-        <h3>Location Data</h3>
+        <h3>1.5 Location Data</h3>
         <ul>
-            <li>GPS coordinates to help you find nearby labourers, equipment, and shops</li>
-            <li>Approximate location based on IP address</li>
+            <li>GPS coordinates (approximate location) to match you with nearby labourers, equipment, and fertilizer shops</li>
+            <li>Location-based search results for local agricultural services</li>
+            <li>Weather information based on your general area</li>
         </ul>
 
         <h2>2. How We Use Your Information</h2>
         <ul>
-            <li>Connect farmers with labourers, equipment owners, contractors, and buyers</li>
-            <li>Verify user identities to maintain trust and safety on the platform</li>
-            <li>Improve and personalize your app experience</li>
-            <li>Send important notifications about your listings, bookings, and transactions</li>
-            <li>Process payments and prevent fraudulent activity</li>
-            <li>Provide customer support and respond to your inquiries</li>
-            <li>Analyze usage patterns to improve our services</li>
-            <li>Comply with legal obligations</li>
+            <li><strong>Core Functionality:</strong> Connect farmers with labourers, equipment owners, contractors, and buyers</li>
+            <li><strong>Verification:</strong> Verify user identities to maintain trust and safety on the platform</li>
+            <li><strong>Personalization:</strong> Customize your experience based on your role, location, and preferences</li>
+            <li><strong>Communication:</strong> Send important notifications about bookings, transactions, and account updates</li>
+            <li><strong>Payments:</strong> Process transactions and prevent fraudulent activity</li>
+            <li><strong>Support:</strong> Provide customer support and respond to inquiries</li>
+            <li><strong>Improvement:</strong> Analyze usage patterns to enhance features and fix bugs</li>
+            <li><strong>Compliance:</strong> Meet legal and regulatory obligations</li>
         </ul>
 
         <h2>3. Information Sharing</h2>
-        <p><strong>We do not sell your personal data.</strong> We share information only in the following circumstances:</p>
+        <p><strong>We do not sell your personal data to third parties.</strong> We share information only in the following limited circumstances:</p>
         
-        <h3>With Other Users</h3>
+        <h3>3.1 With Other App Users</h3>
         <ul>
-            <li>Your profile information is visible to other users</li>
-            <li>Contact details may be shared to facilitate transactions (e.g., rental agreements)</li>
-            <li>Ratings and reviews you receive are publicly visible within the app</li>
+            <li>Your profile name and picture are visible to other users</li>
+            <li>Contact details may be shared to facilitate transactions (e.g., equipment rental agreements)</li>
+            <li>Ratings and reviews are publicly visible within the app</li>
+            <li>Marketplace listings are visible to all users</li>
         </ul>
 
-        <h3>With Service Providers</h3>
-        <ul>
-            <li>Payment processors to handle transactions securely</li>
-            <li>Cloud hosting providers to store your data</li>
-            <li>Analytics providers to help us improve the app</li>
-        </ul>
+        <h3>3.2 Third-Party Service Providers</h3>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Purpose</th>
+                <th>Data Shared</th>
+                <th>Privacy Policy</th>
+            </tr>
+            <tr>
+                <td>Firebase Authentication (Google)</td>
+                <td>User sign-in and authentication</td>
+                <td>Email, Name, User ID, Device ID</td>
+                <td><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></td>
+            </tr>
+            <tr>
+                <td>Google Play Services</td>
+                <td>Location services, core Android functionality</td>
+                <td>Device ID, Location</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></td>
+            </tr>
+            <tr>
+                <td>Koyeb (Cloud Hosting)</td>
+                <td>Data storage and backend services</td>
+                <td>All user data</td>
+                <td><a href="https://www.koyeb.com/legal/privacy" target="_blank">Koyeb Privacy</a></td>
+            </tr>
+        </table>
 
-        <h3>Legal Requirements</h3>
+        <h3>3.3 Legal Requirements</h3>
         <ul>
-            <li>To comply with applicable laws and regulations</li>
+            <li>To comply with applicable laws, regulations, or legal processes</li>
             <li>To respond to lawful requests from public authorities</li>
-            <li>To protect our legal rights and prevent fraud</li>
+            <li>To protect our rights, privacy, safety, or property</li>
+            <li>To prevent, detect, and investigate fraud or security incidents</li>
         </ul>
 
         <h2>4. Data Security</h2>
+        <p>We implement appropriate technical and organizational security measures to protect your personal information:</p>
         <ul>
-            <li>All data transmitted between your device and our servers is encrypted using HTTPS</li>
-            <li>Passwords are hashed and salted before storage</li>
-            <li>We conduct regular security audits and vulnerability assessments</li>
-            <li>Access to personal data is restricted to authorized personnel only</li>
-            <li>We use industry-standard security measures to protect your information</li>
+            <li><strong>Encryption in Transit:</strong> All data between your device and our servers is encrypted using HTTPS/TLS</li>
+            <li><strong>Secure Authentication:</strong> We use Firebase Authentication with industry-standard OAuth 2.0 protocols</li>
+            <li><strong>Access Controls:</strong> Personal data access is restricted to authorized personnel only</li>
+            <li><strong>Regular Audits:</strong> We conduct security assessments and vulnerability scans</li>
+            <li><strong>Data Minimization:</strong> We only collect data necessary for app functionality</li>
         </ul>
 
         <h2>5. Your Rights and Choices</h2>
+        <p>You have the following rights regarding your personal data:</p>
         <ul>
-            <li><strong>Access:</strong> Request a copy of your personal data</li>
-            <li><strong>Correction:</strong> Correct inaccurate or incomplete information</li>
-            <li><strong>Deletion:</strong> Request deletion of your account and associated data</li>
-            <li><strong>Opt-out:</strong> Disable marketing communications</li>
-            <li><strong>Data Portability:</strong> Export your data in a machine-readable format</li>
-            <li><strong>Location:</strong> Disable location services in your device settings</li>
-            <li><strong>Camera/Storage:</strong> Deny or revoke permission in device settings</li>
+            <li><strong>Access:</strong> Request a copy of all personal data we hold about you</li>
+            <li><strong>Correction:</strong> Update or correct inaccurate or incomplete information</li>
+            <li><strong>Deletion:</strong> Delete your account and all associated data (see <a href="#data-deletion">Delete Your Account</a> section above)</li>
+            <li><strong>Opt-out:</strong> Unsubscribe from marketing communications and non-essential notifications</li>
+            <li><strong>Data Portability:</strong> Export your data in a structured, machine-readable format</li>
+            <li><strong>Location Control:</strong> Enable or disable location services in your device settings at any time</li>
+            <li><strong>Camera/Storage:</strong> Grant or revoke camera and storage permissions in device settings</li>
         </ul>
-        <p>To exercise any of these rights, contact us at siddhikreddy440@gmail.com.</p>
+        <p>To exercise any of these rights, contact us at <strong>siddhikreddy440@gmail.com</strong>. We will respond within 30 days.</p>
 
         <h2>6. Data Retention</h2>
-        <p>We retain your personal data as long as your account remains active. Upon account deletion:</p>
-        <ul>
-            <li>Your data is permanently removed within 30 days</li>
-            <li>Transaction records may be retained longer to comply with tax and legal obligations</li>
-            <li>Anonymized analytics data may be kept indefinitely for service improvement</li>
-        </ul>
+        <p>We retain your personal data according to the following schedule:</p>
+        <table>
+            <tr>
+                <th>Data Category</th>
+                <th>Retention Period</th>
+            </tr>
+            <tr>
+                <td>Active account data</td>
+                <td>As long as your account remains active</td>
+            </tr>
+            <tr>
+                <td>Deleted account data</td>
+                <td>Permanently removed within 30 days of deletion request</td>
+            </tr>
+            <tr>
+                <td>Transaction records</td>
+                <td>Retained for 90 days after deletion for legal/tax compliance, then permanently deleted</td>
+            </tr>
+            <tr>
+                <td>Anonymized analytics</td>
+                <td>May be retained indefinitely (cannot identify individual users)</td>
+            </tr>
+        </table>
 
         <h2>7. Children's Privacy</h2>
-        <p>AgriAgent is not intended for users under 18 years of age. We do not knowingly collect personal information from minors. If you believe a minor has provided us with personal information, please contact us immediately and we will delete such information.</p>
+        <p>AgriAgent is intended for users <strong>18 years of age and older</strong>. We do not knowingly collect, use, or disclose personal information from children under 18. If we become aware that a minor has provided us with personal information, we will:</p>
+        <ul>
+            <li>Immediately delete such information from our servers</li>
+            <li>Terminate the associated account</li>
+            <li>Notify the parents or guardians if contact information is available</li>
+        </ul>
+        <p>If you believe a child has provided us with personal data, please contact us immediately.</p>
 
         <h2>8. Location Services</h2>
-        <p>We request location access to help you find nearby labourers, equipment, and shops. Location data is:</p>
+        <p>AgriAgent requests access to your device's approximate location to provide core agricultural services:</p>
         <ul>
-            <li>Collected only when you grant permission</li>
-            <li>Used only while you use relevant features</li>
-            <li>Not stored historically unless needed for a specific transaction</li>
+            <li>Finding nearby labourers and workers</li>
+            <li>Locating available equipment for rent in your area</li>
+            <li>Showing nearby fertilizer and agricultural supply shops</li>
+            <li>Providing localized weather information</li>
         </ul>
-        <p>You can disable location services in your device settings at any time, but this may affect app functionality.</p>
+        <p><strong>Important:</strong></p>
+        <ul>
+            <li>Location data is collected only with your explicit permission</li>
+            <li>We use approximate location, not precise GPS coordinates</li>
+            <li>Location history is not stored long-term</li>
+            <li>You can disable location access in device settings at any time</li>
+            <li>Disabling location may limit some app features</li>
+        </ul>
 
-        <h2>9. Camera and Storage Permissions</h2>
-        <p>We request camera and storage access to allow you to:</p>
-        <ul>
-            <li>Upload profile pictures</li>
-            <li>Add photos of equipment for rental</li>
-            <li>Upload produce images for marketplace listings</li>
-            <li>Share photos of problems or issues for community support</li>
-        </ul>
-        <p>You can deny or revoke these permissions at any time. Core app features will still work without these permissions.</p>
+        <h2>9. Camera & Storage Permissions</h2>
+        <p>AgriAgent may request access to your device's camera and storage for the following purposes:</p>
+        <table>
+            <tr>
+                <th>Permission</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Camera</td>
+                <td>Take profile pictures, capture equipment photos for rental listings, photograph crops/produce for marketplace</td>
+            </tr>
+            <tr>
+                <td>Storage (Read)</td>
+                <td>Select existing photos/videos from your gallery for profiles, listings, and community posts</td>
+            </tr>
+            <tr>
+                <td>Storage (Write)</td>
+                <td>Save downloaded receipts, transaction records, or shared content</td>
+            </tr>
+        </table>
+        <p>These permissions are optional. You can deny or revoke them at any time in your device settings. Core app features will continue to function without these permissions.</p>
 
         <h2>10. Third-Party Services</h2>
-        <p>Our app may contain links to third-party websites or services. We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies.</p>
+        <p>Our app integrates with the following third-party services. We encourage you to review their privacy policies:</p>
+        <ul>
+            <li><strong>Google Firebase:</strong> Authentication, analytics, and cloud services</li>
+            <li><strong>Google Maps/Places:</strong> Location-based features and maps display</li>
+            <li><strong>Google Sign-In:</strong> Account creation and authentication</li>
+        </ul>
+        <p>We are not responsible for the privacy practices of these third-party services.</p>
 
         <h2>11. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by:</p>
+        <p>We may update this Privacy Policy periodically to reflect changes in our practices, app features, or legal requirements. When we make changes:</p>
         <ul>
-            <li>Posting the new policy on this page</li>
-            <li>Updating the "Last Updated" date</li>
-            <li>Sending an in-app notification for significant changes</li>
+            <li>We will update the "Last Updated" date at the top of this page</li>
+            <li>Significant changes will be notified through an in-app notification or email</li>
+            <li>Continued use of the app after changes constitutes acceptance of the updated policy</li>
         </ul>
-        <p>Continued use of the app after changes constitutes acceptance of the modified policy.</p>
 
-        <h2>12. Contact Us</h2>
+        <h2>12. Your Consent</h2>
+        <p>By using AgriAgent, you consent to:</p>
+        <ul>
+            <li>The collection and use of information as described in this Privacy Policy</li>
+            <li>The sharing of information as outlined in Section 3</li>
+            <li>The data retention practices described in Section 6</li>
+        </ul>
+        <p>You may withdraw consent at any time by deleting your account (see <a href="#data-deletion">Delete Your Account</a> section).</p>
+
+        <h2>13. Contact Us</h2>
         <div class="contact">
-            <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
-            <p><strong>Email:</strong> siddhikreddy440@gmail.com</p>
-            <p><strong>Phone:</strong> +91 8897350151</p>
-            <p><strong>Address:</strong> Hyderabad, Telangana, India - 500001</p>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+            <p><strong>📧 Email:</strong> <a href="mailto:siddhikreddy440@gmail.com">siddhikreddy440@gmail.com</a></p>
+            <p><strong>📱 Phone:</strong> +91 8897350151</p>
+            <p><strong>📍 Address:</strong> Hyderabad, Telangana, India - 500001</p>
+            <p><strong>⏱️ Response Time:</strong> We aim to respond to all inquiries within 2-3 business days</p>
         </div>
+
+        <p style="text-align: center; margin-top: 30px; color: #666; font-size: 12px;">
+            © 2026 AgriAgent. All rights reserved.
+        </p>
     </div>
 </body>
 </html>
